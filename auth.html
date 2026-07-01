@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login / Sign Up - EduPrep Pro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="logo">EduPrep Pro</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="psc-details.html">PSC Details</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="btn btn-primary" disabled>Login / Sign Up</button>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="auth-card">
+
+    <div class="auth-tabs">
+      <button type="button" class="auth-tab active" data-tab="login">Login</button>
+      <button type="button" class="auth-tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- Login form -->
+    <form id="login-form" class="auth-form" onsubmit="event.preventDefault(); alert('Logged in! (demo only)');">
+      <h1>Welcome Back</h1>
+      <p class="auth-sub">Log in to continue your exam preparation.</p>
+
+      <div class="form-field">
+        <label for="login-email">Email Address</label>
+        <input id="login-email" type="email" placeholder="example@gmail.com" required />
+      </div>
+
+      <div class="form-field">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" placeholder="Enter your password" required />
+      </div>
+
+      <div class="auth-row">
+        <label class="auth-checkbox">
+          <input type="checkbox" /> Remember me
+        </label>
+        <a href="#" class="auth-link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary full">Login</button>
+
+      <p class="auth-switch">
+        Don't have an account?
+        <a href="#" class="auth-link" data-switch="signup">Sign up</a>
+      </p>
+    </form>
+
+    <!-- Sign up form -->
+    <form id="signup-form" class="auth-form hidden" onsubmit="event.preventDefault(); alert('Account created! (demo only)');">
+      <h1>Create Your Account</h1>
+      <p class="auth-sub">Join 50k+ students preparing with EduPrep Pro.</p>
+
+      <div class="form-field">
+        <label for="signup-name">Full Name</label>
+        <input id="signup-name" type="text" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-field">
+        <label for="signup-email">Email Address</label>
+        <input id="signup-email" type="email" placeholder="example@gmail.com" required />
+      </div>
+
+      <div class="form-field">
+        <label for="signup-phone">Phone Number</label>
+        <input id="signup-phone" type="tel" placeholder="+91 00000 00000" />
+      </div>
+
+      <div class="form-field">
+        <label for="signup-password">Password</label>
+        <input id="signup-password" type="password" placeholder="Create a password" required />
+      </div>
+
+      <label class="auth-checkbox">
+        <input type="checkbox" required /> I agree to the Terms of Service and Privacy Policy
+      </label>
+
+      <button type="submit" class="btn btn-primary full">Create Account</button>
+
+      <p class="auth-switch">
+        Already have an account?
+        <a href="#" class="auth-link" data-switch="login">Log in</a>
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="logo">EduPrep Pro</p>
+      <p>Empowering aspirants globally through technology-driven learning solutions and expert mentorship.</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Quick Links</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Help Center</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Exam Prep</p>
+      <a href="psc-details.html">PSC Details</a>
+      <a href="#">UPSC Preparation</a>
+      <a href="#">NEET Academy</a>
+      <a href="#">JEE Masterclass</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Contact Us</p>
+      <p class="contact-line"><span class="material-icons">mail</span> support@edupreppro.com</p>
+      <p class="contact-line"><span class="material-icons">call</span> 1800-PREP-PRO</p>
+      <div class="social-icons">
+        <a href="#"><span class="material-icons">share</span></a>
+        <a href="#"><span class="material-icons">public</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.auth-tab');
+  const loginForm = document.getElementById('login-form');
+  const signupForm = document.getElementById('signup-form');
+
+  function showTab(name) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+    loginForm.classList.toggle('hidden', name !== 'login');
+    signupForm.classList.toggle('hidden', name !== 'signup');
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => showTab(tab.dataset.tab));
+  });
+
+  document.querySelectorAll('[data-switch]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      showTab(link.dataset.switch);
+    });
+  });
+</script>
+
+
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+    }
+  })();
+</script>
+</body>
+</html>

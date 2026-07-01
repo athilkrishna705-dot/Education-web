@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Get in Touch - EduPrep Pro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <p class="logo">EduPrep Pro</p>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="psc-details.html">PSC Details</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="auth.html" class="btn btn-primary">Login / Sign Up</a>
+  </div>
+</header>
+
+<section class="contact-intro container">
+  <h1>Get in Touch</h1>
+  <p>Have questions about our courses or exam prep? Our team is here to help you navigate your journey toward success.</p>
+</section>
+
+<section class="container contact-grid">
+  <!-- Contact info -->
+  <div class="contact-info-card">
+    <h2>Contact Information</h2>
+
+    <div class="contact-info-row">
+      <div class="contact-info-icon"><span class="material-icons">call</span></div>
+      <div>
+        <p class="ci-label">Phone Number</p>
+        <p class="ci-value">+91 98765 43210</p>
+        <p class="ci-sub">Mon-Sat, 9am to 6pm IST</p>
+      </div>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-info-icon"><span class="material-icons">mail</span></div>
+      <div>
+        <p class="ci-label">Email Address</p>
+        <p class="ci-value">support@edupreppro.com</p>
+        <p class="ci-sub">Expected response: 24 hours</p>
+      </div>
+    </div>
+
+    <div class="contact-info-row">
+      <div class="contact-info-icon"><span class="material-icons">location_on</span></div>
+      <div>
+        <p class="ci-label">Our Campus</p>
+        <p class="ci-value">Hilite Business Park, Calicut</p>
+        <p class="ci-value small">Kerala, India - 673014</p>
+      </div>
+    </div>
+
+    <div class="contact-map">
+      <img src="https://www.figma.com/api/mcp/asset/eefbcc72-9d8b-4934-b14d-1881aec3ee4b" alt="Campus location map" />
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="contact-form-card">
+    <h2>Send us a Message</h2>
+    <p class="contact-form-sub">Fill out the form below and our counselor will reach out to you shortly.</p>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will get back to you shortly.');">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="full-name">Full Name</label>
+          <input id="full-name" type="text" placeholder="Enter your name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="example@gmail.com" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+91 00000 00000" />
+        </div>
+        <div class="form-field">
+          <label for="topic">Topic of Interest</label>
+          <select id="topic">
+            <option value="" disabled selected>Select an option</option>
+            <option>PSC Details</option>
+            <option>UPSC Preparation</option>
+            <option>NEET Academy</option>
+            <option>JEE Masterclass</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Send Message <span class="material-icons">send</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="container">
+  <div class="help-banner">
+    <h2>Looking for immediate answers?</h2>
+    <p>Check out our comprehensive Help Center and FAQ page for detailed information on courses, billing, and technical support.</p>
+    <button class="btn btn-help">Visit Help Center</button>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="logo">EduPrep Pro</p>
+      <p>Empowering aspirants globally through technology-driven learning solutions and expert mentorship.</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Quick Links</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Help Center</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Exam Prep</p>
+      <a href="psc-details.html">PSC Details</a>
+      <a href="#">UPSC Preparation</a>
+      <a href="#">NEET Academy</a>
+      <a href="#">JEE Masterclass</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Contact Us</p>
+      <p class="contact-line"><span class="material-icons">mail</span> support@edupreppro.com</p>
+      <p class="contact-line"><span class="material-icons">call</span> 1800-PREP-PRO</p>
+      <div class="social-icons">
+        <a href="#"><span class="material-icons">share</span></a>
+        <a href="#"><span class="material-icons">public</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+    }
+  })();
+</script>
+</body>
+</html>

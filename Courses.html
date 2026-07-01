@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Choose Your Course - EduPrep Pro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <p class="logo">EduPrep Pro</p>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html" class="active">Courses</a>
+      <a href="psc-details.html">PSC Details</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="auth.html" class="btn btn-primary">Login / Sign Up</a>
+  </div>
+</header>
+
+<section class="courses-intro-section">
+  <div class="container">
+    <div class="courses-intro">
+      <p class="eyebrow">Available Programs</p>
+      <h1>Choose Your Course</h1>
+      <p class="courses-intro-text">
+        Tailored preparation modules for India's most prestigious examinations.
+        Start your journey with industry-leading mentors and structured content.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="courses-grid-top container">
+  <!-- Featured course -->
+  <div class="course-card course-featured">
+    <div class="course-featured-image">
+      <img src="https://www.figma.com/api/mcp/asset/c10f8ac2-b038-4f50-b8f8-5edbf85de48d" alt="PSC Comprehensive Masterclass" />
+      <span class="badge-popular">Most Popular</span>
+    </div>
+    <div class="course-featured-body">
+      <div class="course-tag">
+        <span class="material-icons">account_balance</span>
+        Public Service Commission
+      </div>
+      <h3>PSC Comprehensive Masterclass</h3>
+      <p>A complete 360-degree preparation program covering state-specific syllabus, current affairs, and mock interview drills led by former commissioners.</p>
+      <div class="course-stats">
+        <div class="course-stat">
+          <p class="stat-num">150+</p>
+          <p class="stat-text">Mock Tests</p>
+        </div>
+        <span class="divider"></span>
+        <div class="course-stat">
+          <p class="stat-num">12k+</p>
+          <p class="stat-text">Enrollments</p>
+        </div>
+      </div>
+      <button class="btn btn-primary">
+        View Details <span class="material-icons">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Simple course -->
+  <div class="course-card course-simple">
+    <img src="https://www.figma.com/api/mcp/asset/02a632a0-5b90-4745-b66c-eef4aa33cc52" alt="UPSC Integrated Batch" />
+    <div class="course-simple-body">
+      <div class="course-tag">
+        <span class="material-icons">gavel</span>
+        Civil Services
+      </div>
+      <h3>UPSC Integrated Batch</h3>
+      <p>Master the Prelims and Mains with our expert-curated modules and daily answer writing practice sessions.</p>
+      <a href="#" class="view-link">View Details <span class="material-icons">chevron_right</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="courses-grid container">
+  <div class="course-card course-simple">
+    <img src="https://www.figma.com/api/mcp/asset/8242622b-9dff-4206-a7f6-c1f736b5bc59" alt="NEET UG Excellence" />
+    <div class="course-simple-body">
+      <div class="course-tag">
+        <span class="material-icons">medical_services</span>
+        Medical
+      </div>
+      <h3>NEET UG Excellence</h3>
+      <p>In-depth Biology, Physics, and Chemistry modules with specialized doubt-clearing sessions by top doctors.</p>
+      <a href="#" class="view-link">View Details <span class="material-icons">chevron_right</span></a>
+    </div>
+  </div>
+
+  <div class="course-card course-simple">
+    <img src="https://www.figma.com/api/mcp/asset/04650132-3de6-48e4-9268-ad4e6153ffa0" alt="IBPS & SBI PRO" />
+    <div class="course-simple-body">
+      <div class="course-tag">
+        <span class="material-icons">payments</span>
+        Banking
+      </div>
+      <h3>IBPS &amp; SBI PRO</h3>
+      <p>Focus on quantitative aptitude, logical reasoning, and general awareness with timed practice drills.</p>
+      <a href="#" class="view-link">View Details <span class="material-icons">chevron_right</span></a>
+    </div>
+  </div>
+
+  <div class="course-card course-simple">
+    <img src="https://www.figma.com/api/mcp/asset/003075ae-ef60-4f7f-8037-9769dd301a60" alt="JEE Mains & Advance" />
+    <div class="course-simple-body">
+      <div class="course-tag">
+        <span class="material-icons">precision_manufacturing</span>
+        Engineering
+      </div>
+      <h3>JEE Mains &amp; Advance</h3>
+      <p>Advanced problem-solving techniques and conceptual clarity sessions for top-tier engineering ranks.</p>
+      <a href="#" class="view-link">View Details <span class="material-icons">chevron_right</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="container skills-inner">
+    <div class="skills-intro">
+      <span class="pill-tag">Career Growth</span>
+      <h2>Tech &amp; Design Skills</h2>
+      <p>Bridge the gap between academics and industry with high-demand vocational skills.</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><span class="material-icons">palette</span></div>
+      <div class="skill-body">
+        <h4>UI/UX Design</h4>
+        <p>From wireframing to high-fidelity prototyping with Figma.</p>
+        <a href="#" class="view-link small">Enroll Now <span class="material-icons">north_east</span></a>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon"><span class="material-icons">code</span></div>
+      <div class="skill-body">
+        <h4>Web Development</h4>
+        <p>Full-stack mastery with React, Node, and modern databases.</p>
+        <a href="#" class="view-link small">Enroll Now <span class="material-icons">north_east</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="logo">EduPrep Pro</p>
+      <p>Empowering aspirants globally through technology-driven learning solutions and expert mentorship.</p>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Quick Links</p>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+      <a href="#">Help Center</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Exam Prep</p>
+      <a href="#">PSC Details</a>
+      <a href="#">UPSC Preparation</a>
+      <a href="#">NEET Academy</a>
+      <a href="#">JEE Masterclass</a>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-heading">Contact Us</p>
+      <p class="contact-line"><span class="material-icons">mail</span> support@edupreppro.com</p>
+      <p class="contact-line"><span class="material-icons">call</span> 1800-PREP-PRO</p>
+      <div class="social-icons">
+        <a href="#"><span class="material-icons">share</span></a>
+        <a href="#"><span class="material-icons">public</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+    }
+  })();
+</script>
+</body>
+</html>
